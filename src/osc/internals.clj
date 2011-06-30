@@ -202,9 +202,9 @@
     (.start t)
     t))
 
-(declare *osc-handlers*)
-(declare *current-handler*)
-(declare *current-path*)
+(declare ^{:dynamic true} *osc-handlers*)
+(declare ^{:dynamic true} *current-handler*)
+(declare ^{:dynamic true} *current-path*)
 
 (defn- msg-handler-dispatcher [handlers]
   (fn [msg]
